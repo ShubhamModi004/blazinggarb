@@ -14,6 +14,11 @@ body {
   text-decoration: underline;
   color: #EE7717
 }
+
+.callOut{
+  display: none !important;
+}
+
 Link{
   text-decoration: none;
 }
@@ -343,7 +348,6 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -630,3 +634,40 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+
+/* Netflify section */
+.netlify-identity-menu {
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    list-style-position: outside;
+    list-style-image: none;
+    display: flex;
+    margin-left: 10rem;
+}
+
+.netlify-identity-menu li{
+  list-style: none;
+  color: white;
+}
+
+.netlify-identity-signup
+{
+  color: #fff;
+  margin-right: 5rem;
+}
+.netlify-identity-login{
+  color: #fff;
+}
+
+.callOut{
+  display: none !important;
+}
+
+
+
+
