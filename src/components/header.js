@@ -14,7 +14,8 @@ class Header extends React.Component {
   }
 
   render() {
-    const { siteTitle } = this.props; 
+    const { siteTitle } = this.props;
+    const user = netlifyIdentity.currentUser(); 
     return(
       (
         <header

@@ -19,7 +19,10 @@ const getSiteMetadata = graphql`
 `
 
 class Layout extends React.Component() {
-  
+
+  componentDidMount() {
+    netlifyIdentity.init();
+  }
   render() {
     const { children } = this.props;
     
