@@ -650,6 +650,13 @@ pre tt:after {
     margin-left: 10rem;
 }
 
+@media only screen and (max-width: 770px){
+  .netlify-identity-menu{
+    display: block;
+    margin-left: 0rem;
+  }
+}
+
 .netlify-identity-menu li{
   list-style: none;
   color: white;
