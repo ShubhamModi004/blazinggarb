@@ -22,7 +22,9 @@ class Layout extends React.Component() {
   
   render() {
     const { children } = this.props;
+    
     const user = netlifyIdentity.currentUser();
+    console.log(user);
     return (  
       <StaticQuery
         query={getSiteMetadata}
@@ -46,7 +48,7 @@ class Layout extends React.Component() {
                 return isCurrent ? { className: "active" } : null
               }} to="/products">Products</Link></li>
             </ul>
-            
+            <h1>{user}</h1>
             <div
               style={{
                 margin: `0 auto`,
