@@ -663,7 +663,9 @@ pre tt:after {
 .netlify-identity-login{
   color: #fff;
 }
-
+.netlify-identity-logout{
+  color: #fff;
+}
 .callOut{
   display: none !important;
 }
