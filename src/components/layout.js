@@ -1,24 +1,46 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
+const getSiteMetadata = graphql`
+      {
         site {
           siteMetadata {
-            title
+            title,
+            description,
+            author
           }
         }
       }
-    `}
+`
+
+const Layout = ({ children }) => (
+  
+  <StaticQuery
+    query={getSiteMetadata}
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
+        <ul style={{ display: 'flex', borderBottom: '1px solid', listStyle: 'none' }}>
+          <li style={{ padding: '3px', margin: '10px'}}><Link getProps={({ isCurrent }) => {
+              return isCurrent ? { className: "active" } : null
+            }} to="/" >Home</Link></li>
+          <li style={{ padding: '3px', margin: '10px' }}><Link getProps={({ isCurrent }) => {
+              return isCurrent ? { className: "active" } : null
+            }} to="/page-2">Page 2</Link></li>
+          <li style={{ padding: '3px', margin: '10px' }}><Link getProps={({ isCurrent }) => {
+              return isCurrent ? { className: "active" } : null
+            }} to="/page-3">Page 3</Link></li>
+          <li style={{ padding: '3px', margin: '10px' }}><Link getProps={({ isCurrent }) => {
+              return isCurrent ? { className: "active" } : null
+            }} to="/blog">Blog</Link></li>
+          <li style={{ padding: '3px', margin: '10px' }}><Link getProps={({ isCurrent }) => {
+            return isCurrent ? { className: "active" } : null
+          }} to="/products">Products</Link></li>
+        </ul>
         <div
           style={{
             margin: `0 auto`,
@@ -31,7 +53,7 @@ const Layout = ({ children }) => (
           <footer>
             © {new Date().getFullYear()}, Built with
             {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <a href="http://shubham004.in/intelictoWebsite">{data.site.siteMetadata.author}</a>
           </footer>
         </div>
       </>

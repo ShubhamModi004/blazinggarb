@@ -6,6 +6,17 @@ html {
 body {
   margin: 0;
 }
+.blazing{
+  color: white;
+}
+
+.active{
+  text-decoration: underline;
+  color: #EE7717
+}
+Link{
+  text-decoration: none;
+}
 article,
 aside,
 details,
@@ -40,6 +51,7 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: wavy;
 }
 a:active,
 a:hover {
