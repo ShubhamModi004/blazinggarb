@@ -647,7 +647,6 @@ pre tt:after {
     list-style-position: outside;
     list-style-image: none;
     display: flex;
-    margin-left: 10rem;
 }
 
 @media only screen and (max-width: 770px){
